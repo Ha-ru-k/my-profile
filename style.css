@@ -1,0 +1,45 @@
+body{
+    font-family: scan-serif;
+    background-color: #f0f0f0; /*背景色：薄いグレー*/
+    color: #333; /*文字色：濃いグレー*/
+    height: 100vh; /*画面の高さいっぱいに広げる*/
+    margin: 0;
+
+    /*Flexboxを使って中身を上下左右中央寄せにする*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s; /*色が変わるときにふわっとする*/
+}
+
+.container {
+    background-color: white;
+    padding: 2rem; /* 内側の余白 */
+    border-radius: 10px; /* 角丸 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影をつける */
+    text-align: center;
+}
+
+button{
+    margin-top: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* ダークモード用のクラス（後でJSでつけ外しする） */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+body.dark-mode .container {
+    background-color: #444;
+    color: #fff;
+}
+
+.icon {
+    width: 120px;       /* 幅 */
+    height: 120px;      /* 高さ */
+    border-radius: 50%; /* ★ここ重要：50%にすると正円になります */
+    object-fit: cover;  /* 画像が歪まないようにトリミングする */
+    border: 4px solid #ddd; /* 枠線をつける */
+    margin-bottom: 1rem;
+}
